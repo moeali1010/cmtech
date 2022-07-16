@@ -37,23 +37,11 @@ export class Camera1Component implements OnInit {
         this.multipleWebcamsAvailable = mediaDevices && mediaDevices.length > 1;
       });
 
-
-
-
-    for (let index = 0; index < 3; index++) {
-      setTimeout(() => {
-        this.trigger.next();
-        this.userImages.push(this.webcamImage.imageAsDataUrl)
-      }, 3000);
-
-    }
-
-
-
   }
 
   triggerSnapshot(): void {
     this.trigger.next();
+    this.userImages.push(this.webcamImage.imageAsDataUrl)
 
   }
 
