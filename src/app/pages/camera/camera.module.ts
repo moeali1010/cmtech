@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CameraRoutingModule } from './camera-routing.module';
 import { Camera1Component } from './camera1/camera1.component';
-
+import {WebcamModule} from 'ngx-webcam';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,8 @@ import { Camera1Component } from './camera1/camera1.component';
   ],
   imports: [
     CommonModule,
-    CameraRoutingModule
+    CameraRoutingModule,
+    WebcamModule
   ]
 })
 export class CameraModule { }
