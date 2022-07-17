@@ -5,6 +5,12 @@
   </h1>
 
   <div>
+
+
+    <input type="text" placeholder="Type your payroll number">
+    <br><br><br>
+
+
     <webcam [height]="500" [width]="500" [trigger]="triggerObservable" (imageCapture)="handleImage($event)" *ngIf="showWebcam"
             [allowCameraSwitch]="allowCameraSwitch" [switchCamera]="nextWebcamObservable"
             [videoOptions]="videoOptions"
@@ -14,17 +20,20 @@
     ></webcam>
     <br/>
     <button class="actionBtn" (click)="triggerSnapshot();">Take A Snapshot</button>
-    <br>
-    <button class="actionBtn" (click)="dsiplayArray();">Display array in console</button>
+    <br><br><br>
+
+    <div class="snapshot" *ngIf="webcamImage">
+
+      <img [src]="webcamImage.imageAsDataUrl"/>
+    </div>
+
+    <button class="actionBtn" >Send</button>
 
 
   </div>
 </div>
 
-<div class="snapshot" *ngIf="webcamImage">
-  <h2>Nice one!</h2>
-  <img [src]="webcamImage.imageAsDataUrl"/>
-</div>
+
 
 <h4 *ngIf="errors.length > 0">Messages:</h4>
 <ul *ngFor="let error of errors">
