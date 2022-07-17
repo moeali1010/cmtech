@@ -1,1 +1,6 @@
 <p>camera2 works!</p>
+
+<face-detect [width]="500" [height]="380" [triggerFace]="triggerObservable" (imageCapture)="viewChange($event)">
+</face-detect>
+<button class="button" (click)="triggerSnapshot();">Detect Face</button>
+

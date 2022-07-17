@@ -6,6 +6,11 @@ import { Camera1Component } from './camera1/camera1.component';
 import {WebcamModule} from 'ngx-webcam';
 import { Camera2Component } from './camera2/camera2.component';
 
+
+import {FaceDetectModule} from '@haseeamarathunga/face-detect';
+import {NgOpenCVModule, OpenCVOptions} from 'ng-open-cv';
+
+
 @NgModule({
   declarations: [
     Camera1Component,
@@ -14,7 +19,10 @@ import { Camera2Component } from './camera2/camera2.component';
   imports: [
     CommonModule,
     CameraRoutingModule,
-    WebcamModule
+    WebcamModule,
+    NgOpenCVModule,
+
+    FaceDetectModule,
   ]
 })
 export class CameraModule { }
