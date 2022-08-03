@@ -10,13 +10,15 @@ import { Camera2Component } from './camera2/camera2.component';
 import {FaceDetectModule} from '@haseeamarathunga/face-detect';
 import {NgOpenCVModule, OpenCVOptions} from 'ng-open-cv';
 import { Camera3Component } from './camera3/camera3.component';
+import { Camera4Component } from './camera4/camera4.component';
 
 
 @NgModule({
   declarations: [
     Camera1Component,
     Camera2Component,
-    Camera3Component
+    Camera3Component,
+    Camera4Component
   ],
   imports: [
     CommonModule,

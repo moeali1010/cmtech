@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { Camera1Component } from './camera1/camera1.component';
 import { Camera2Component } from './camera2/camera2.component';
 import { Camera3Component } from './camera3/camera3.component';
+import { Camera4Component } from './camera4/camera4.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'cam3',
     component: Camera3Component
+  },
+  {
+    path: 'cam4',
+    component: Camera4Component
   },
 ];
 
