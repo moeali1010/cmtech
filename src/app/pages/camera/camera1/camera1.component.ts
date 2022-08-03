@@ -39,13 +39,27 @@ export class Camera1Component implements OnInit {
 
   }
 
+
+  saveThreeImages() {
+    this.triggerSnapshot();
+    for (let index = 0; index < 2; index++) {
+      setTimeout(
+        () => {
+          this.triggerSnapshot();
+        }, 1000);
+
+    }
+
+
+  }
+
   triggerSnapshot(): void {
     this.trigger.next();
     this.userImages.push(this.webcamImage.imageAsDataUrl)
 
   }
 
-  dsiplayArray(){
+  dsiplayArray() {
     console.log('this.userImages', this.userImages)
   }
 

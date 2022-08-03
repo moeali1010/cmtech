@@ -19,7 +19,7 @@
             (initError)="handleInitError($event)"
     ></webcam>
     <br/>
-    <button class="actionBtn" (click)="triggerSnapshot();">Take A Snapshot</button>
+    <button class="actionBtn" (click)=" saveThreeImages();">Take A Snapshot</button>
     <br><br><br>
 
     <div class="snapshot" *ngIf="webcamImage">
@@ -27,7 +27,7 @@
       <img [src]="webcamImage.imageAsDataUrl"/>
     </div>
 
-    <button class="actionBtn" >Send</button>
+    <button class="actionBtn" (click)="dsiplayArray();" >Send</button>
 
 
   </div>
